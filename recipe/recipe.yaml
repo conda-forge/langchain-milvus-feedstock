@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "0.3.3"
+  version: "0.4.0"
 
 package:
   name: langchain-milvus
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/l/langchain-milvus/langchain_milvus-${{ version }}.tar.gz
-  sha256: 406c2d88da133741f5cc3e2fea4b36386182b35500205c70d003382ded210e41
+  sha256: 5fd962874bd0fec1dfd87513610807fcf7abf8c1ec8a868819c0b02483c9708f
 
 build:
   number: 0
