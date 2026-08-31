@@ -11,10 +11,6 @@ package:
 source:
   url: https://pypi.org/packages/source/l/langchain-milvus/langchain_milvus-${{ version }}.tar.gz
   sha256: 5fd962874bd0fec1dfd87513610807fcf7abf8c1ec8a868819c0b02483c9708f
-  patches:
-    # milvus-lite is not yet packaged on conda-forge; drop it from the
-    # declared dependencies so `pip check` doesn't flag it as missing.
-    - patches/remove-milvus-lite-dependency.patch
 
 build:
   number: 0
@@ -30,6 +26,7 @@ requirements:
     - python >=${{ python_min }}
     - langchain-core >=1.4.9,<2.0.0
     - pymilvus >=3.0.0,<4.0
+    - milvus-lite >=3.1.0,<4.0
 
 tests:
   - python:
